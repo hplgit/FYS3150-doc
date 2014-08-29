@@ -1,7 +1,6 @@
-TITLE: Slides for A Primer on Scientific Programming with Python
-AUTHOR: Hans Petter Langtangen Email:hpl@simula.no
+TITLE: Slides for the course Computational Physics I (FYS3150)
+AUTHOR: Morten Hjorth-Jensen Email:morten.hjorth-jensen@fys.uio.no
 
-The slides come in a variety of formats [^source].
 
 <%def name="slide_types(name)">
 
@@ -22,11 +21,3 @@ The slides come in a variety of formats [^source].
 ===== Slides week 34-36 =====
 
 ${slide_types("slides1")}
-
-
---------
-
-[^source]: The slides are written in the
-"DocOnce": "http://hplgit.github.io/doconce/doc/web/index.html"
-markup language, as the
-book, and can easily be translated to a range of formats and styles.
