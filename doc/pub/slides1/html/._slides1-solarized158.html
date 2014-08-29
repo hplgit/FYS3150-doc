@@ -322,34 +322,34 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0158"></a>
+<!-- !split -->
 
+<h2>Programming classes  <a name="___sec164"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
+With this function, statements like
+<code>Complex d = b;</code> or <code>Complex d(b);</code>
+make a new object \( d \), which becomes a copy of \( b \).
+We can make simple implementations in terms of the assignment
 
 <p>
-<!-- institution(s) -->
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%">Complex:: Complex (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; c)
+{ *<span style="color: #8B008B; font-weight: bold">this</span> = c; }
+</pre></div>
 <p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+which  is a pointer to "this object", <code>*this</code> is the present object,
+so <code>*this = c;</code> means setting the present object equal to \( c \), that is
+<code>this->operator= (c);</code>.
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized157.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized159.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

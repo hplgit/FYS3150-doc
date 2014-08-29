@@ -322,34 +322,37 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0131"></a>
+<!-- !split -->
 
+<h2>How to use the Library functions  <a name="___sec135"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
+For Fortran users:
 
 <p>
-<!-- institution(s) -->
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+<!-- code=fortran (!bc fcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%"><span style="color: #8B008B; font-weight: bold">PROGRAM </span><span style="color: #00688B">matrix</span>
+  <span style="color: #8B008B; font-weight: bold">USE </span><span style="color: #00688B">constants</span>
+  <span style="color: #8B008B; font-weight: bold">USE </span><span style="color: #00688B">F90library</span>
+  <span style="color: #8B008B; font-weight: bold">IMPLICIT NONE</span>
+  <span style="color: #228B22">!      The definition of the matrix, using dynamic allocation</span>
+  <span style="color: #a7a7a7; font-weight: bold">REAL</span>(<span style="color: #00688B">DP</span>), <span style="color: #8B008B; font-weight: bold">ALLOCATABLE</span>, <span style="color: #8B008B; font-weight: bold">DIMENSION</span>(:,:) <span style="color: #8B008B; font-weight: bold">::</span> <span style="color: #00688B">a</span>, <span style="color: #00688B">ainv</span>, <span style="color: #00688B">unity</span>
+  <span style="color: #228B22">!      the determinant</span>
+  <span style="color: #a7a7a7; font-weight: bold">REAL</span>(<span style="color: #00688B">DP</span>) <span style="color: #8B008B; font-weight: bold">::</span> <span style="color: #00688B">d</span>
+  <span style="color: #228B22">!      The size of the matrix</span>
+  <span style="color: #a7a7a7; font-weight: bold">INTEGER</span> <span style="color: #8B008B; font-weight: bold">::</span> <span style="color: #00688B">n</span>
+  <span style="color: #a61717; background-color: #e3d2d2">....</span>
+  <span style="color: #228B22">!      Allocate now place in heap for a</span>
+  <span style="color: #8B008B; font-weight: bold">ALLOCATE</span> ( <span style="color: #00688B">a</span>(<span style="color: #00688B">n</span>,<span style="color: #00688B">n</span>), <span style="color: #00688B">ainv</span>(<span style="color: #00688B">n</span>,<span style="color: #00688B">n</span>), <span style="color: #00688B">unity</span>(<span style="color: #00688B">n</span>,<span style="color: #00688B">n</span>) )
+</pre></div>
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized130.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized132.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

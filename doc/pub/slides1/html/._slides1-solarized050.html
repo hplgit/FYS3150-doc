@@ -322,34 +322,48 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0050"></a>
+<!-- !split -->
 
+<h2>Program to compute \( \exp{(-x)} \)  <a name="___sec50"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Oh, it never ends!</b>
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
 <p>
-<!-- institution(s) -->
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%">      printf(<span style="color: #CD5555">&quot;\nx = %4.1f   exp = %12.5E  series = %12.5E</span>
+              number of terms = %d<span style="color: #CD5555">&quot;,</span>
+              x, exp(-x), sum, n);
+   } <span style="color: #228B22">// end of for() loop</span>
+
+   printf(<span style="color: #CD5555">&quot;\n&quot;</span>);           <span style="color: #228B22">// a final line shift on output</span>
+   <span style="color: #8B008B; font-weight: bold">return</span> <span style="color: #B452CD">0</span>;
+} <span style="color: #228B22">// End: function main()</span>
+<span style="color: #228B22">//     The function factorial()</span>
+<span style="color: #228B22">//     calculates and returns n!</span>
+TYPE factorial(<span style="color: #a7a7a7; font-weight: bold">int</span> n)
+{
+   <span style="color: #a7a7a7; font-weight: bold">int</span>  loop;
+   TYPE fac;
+   <span style="color: #8B008B; font-weight: bold">for</span>(loop = <span style="color: #B452CD">1</span>, fac = <span style="color: #B452CD">1.0</span>; loop &lt;= n; loop++)  {
+      fac *= loop;
+
+   <span style="color: #8B008B; font-weight: bold">return</span> fac;
+} <span style="color: #228B22">// End: function factorial()</span>
+</pre></div>
+
+</div>
+
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized049.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized051.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

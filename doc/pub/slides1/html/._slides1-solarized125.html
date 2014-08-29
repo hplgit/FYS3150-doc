@@ -322,34 +322,25 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0125"></a>
+<!-- !split -->
 
+<h2>LU Decomposition, linear equations  <a name="___sec129"></a></h2>
 
+The algorithm goes as follows
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+<ul>
+  <li> Set up the matrix \( \bf A \) and the vector \( \bf w \) with their correct dimensions. This determines the dimensionality of the unknown vector \( \bf x \).</li>
+  <li> Then LU decompose the matrix \( \bf A \) through a call to the function <code>ludcmp(double a, int n, int indx, double &d)</code>. This functions returns the LU decomposed matrix \( \bf A \), its determinant and the vector indx which keeps track of the number of interchanges of rows. If the determinant is zero, the solution is malconditioned.</li>
+  <li> Thereafter you call the function  <code>lubksb(double a, int n, int indx, double w)</code> which uses the LU decomposed matrix \( \bf A \) and the vector \( \bf w \) and returns \( \bf x \) in the same place as \( \bf w \). Upon exit the original content in \( \bf w \) is destroyed. If you wish to keep this information, you should make a backup of it in your calling function.</li>
+</ul>
 
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
-<p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized124.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized126.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

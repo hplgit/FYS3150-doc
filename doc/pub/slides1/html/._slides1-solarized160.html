@@ -322,34 +322,33 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0160"></a>
+<!-- !split -->
 
+<h2>Programming classes  <a name="___sec166"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
+The solution to this is to inline functions.   We discussed inlining in chapter
+2 of the lecture notes.
+Inlining means that the function body is copied directly into
+the calling code, thus avoiding calling the function.
+Inlining is enabled by the inline keyword
 
 <p>
-<!-- institution(s) -->
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%"><span style="color: #8B008B; font-weight: bold">inline</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>+ (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b)
+{ <span style="color: #8B008B; font-weight: bold">return</span> Complex (a.re + b.re, a.im + b.im); }
+</pre></div>
 <p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+Inline functions, with complete bodies must be written in the header file  complex.h.
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized159.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized161.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

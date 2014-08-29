@@ -322,34 +322,27 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0135"></a>
+<!-- !split -->
 
+<h2>Programming classes  <a name="___sec141"></a></h2>
 
+In Fortran a vector or matrix start with \( 1 \), but it is easy
+to change a vector so that it starts with zero or even a negative number.
+If we have a double precision Fortran vector  which starts at \( -10 \) and ends at \( 10 \), we could declare it as
+<code>REAL(KIND=8) ::  vector(-10:10)</code>. Similarly, if we want to start at zero and end at 10 we could write
+<code>REAL(KIND=8) ::  vector(0:10)</code>.
+We have also seen that Fortran  allows us to write a matrix addition \( {\bf A} = {\bf B}+{\bf C} \) as
+<code>A = B + C</code>.  This means that we have overloaded the addition operator so that it translates this operation into
+two loops and an addition of two matrix elements \( a_{ij} = b_{ij}+c_{ij} \).
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized134.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized136.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

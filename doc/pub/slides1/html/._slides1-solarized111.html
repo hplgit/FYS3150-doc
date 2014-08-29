@@ -322,34 +322,50 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0111"></a>
+<!-- !split -->
+
+<h2>Gaussian Elimination and Tridiagonal matrices, project 1  <a name="___sec113"></a></h2>
+
+Suppose we want to solve the following boundary value equation
+
+$$
+  -\frac{d^2u(x)}{dx^2} = f(x,u(x)),
+$$
+
+with \( x\in (a,b) \) and with boundary conditions \( u(a)=u(b) = 0 \).
+We assume that \( f \) is a continuous function in the domain \( x\in (a,b) \).
+Since, except the few cases where it is possible to find analytic solutions, we
+will seek after approximate solutions, we choose to represent the approximation to the second derivative
+from the previous chapter
+
+$$
+  f''=\frac{f_h -2f_0 +f_{-h}}{h^2} +O(h^2).
+$$
+
+We subdivide our interval \( x\in (a,b) \) into \( n \) subintervals by setting \( x_i = ih \), with \( i=0,1,\dots,n+1 \).
+The step size is then given by \( h=(b-a)/(n+1) \) with \( n\in {\mathbb{N}} \).
+For the internal grid points \( i=1,2,\dots n \) we replace the differential operator with the above formula
+resulting in
+
+$$
+u''(x_i) \approx  \frac{u(x_i+h) -2u(x_i) +u(x_i-h)}{h^2},
+$$
+
+which we rewrite as
+
+$$
+u^{''}_i \approx  \frac{u_{i+1} -2u_i +u_{i-i}}{h^2}.
+$$
 
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized110.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized112.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

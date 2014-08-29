@@ -322,34 +322,38 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0132"></a>
+<!-- !split -->
 
+<h2>How to use the Library functions  <a name="___sec136"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
+For Fortran users:
 
 <p>
-<!-- institution(s) -->
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
-<p>
+<!-- code=fortran (!bc fcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%">  <span style="color: #8B008B; font-weight: bold">WRITE</span>(<span style="color: #B452CD">6</span>,*) <span style="color: #CD5555">&#39; The matrix before inversion&#39;</span>
+  <span style="color: #8B008B; font-weight: bold">WRITE</span>(<span style="color: #B452CD">6</span>,<span style="color: #CD5555">&#39;(3F12.6)&#39;</span>) <span style="color: #00688B">a</span>
+  <span style="color: #00688B">ainv</span>=<span style="color: #00688B">a</span>
+  <span style="color: #8B008B; font-weight: bold">CALL </span><span style="color: #00688B">matinv</span> (<span style="color: #00688B">ainv</span>, <span style="color: #00688B">n</span>, <span style="color: #00688B">d</span>)
+  <span style="color: #a61717; background-color: #e3d2d2">....</span>
+  <span style="color: #228B22">!      get the unity matrix</span>
+  <span style="color: #00688B">unity</span>=<span style="color: #658b00">MATMUL</span>(<span style="color: #00688B">ainv</span>,<span style="color: #00688B">a</span>)
+  <span style="color: #8B008B; font-weight: bold">WRITE</span>(<span style="color: #B452CD">6</span>,*) <span style="color: #CD5555">&#39; The unity matrix&#39;</span>
+  <span style="color: #8B008B; font-weight: bold">WRITE</span>(<span style="color: #B452CD">6</span>,<span style="color: #CD5555">&#39;(3F12.6)&#39;</span>) <span style="color: #00688B">unity</span>
+  <span style="color: #228B22">!      deallocate all arrays</span>
+  <span style="color: #8B008B; font-weight: bold">DEALLOCATE</span> (<span style="color: #00688B">a</span>, <span style="color: #00688B">ainv</span>, <span style="color: #00688B">unity</span>)
+<span style="color: #8B008B; font-weight: bold">END PROGRAM </span><span style="color: #00688B">matrix</span>
+</pre></div>
+
+<h1>Week 36  <a name="___sec137"></a></h1>
+
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized131.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized133.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

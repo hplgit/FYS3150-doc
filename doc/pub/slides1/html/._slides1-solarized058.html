@@ -322,34 +322,48 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0058"></a>
+<!-- !split -->
 
+<h2>Error Analysis  <a name="___sec58"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+Our total error becomes
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$
+   \left|\epsilon_{\mbox{tot}}\right|\le  \frac{2 \epsilon_M}{h^2} +
+                          \frac{f_0^{(4)}}{12}h^{2}.
+    \tag{1}
+$$
+
+It is then natural to ask which value of \( h \) yields the smallest
+total error. Taking the derivative of \( \left|\epsilon_{\mbox{tot}}\right| \)
+with respect to \( h \) results in
+
+$$
+   h= \left(\frac{ 24\epsilon_M}{f_0^{(4)}}\right)^{1/4}.
+$$
+
+With double precision and \( x=10 \) we obtain
+
+$$
+   h\approx 10^{-4}.
+$$
+
+Beyond this value, it is essentially the loss of numerical precision
+which takes over.
+</div>
 
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized057.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized059.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

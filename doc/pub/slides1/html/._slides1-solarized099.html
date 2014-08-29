@@ -322,34 +322,45 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0099"></a>
+<!-- !split -->
+
+<h2>Armadillo, simple examples  <a name="___sec101"></a></h2>
 
 
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%"><span style="color: #1e889b">#include &lt;iostream&gt;</span>
+<span style="color: #1e889b">#include &quot;armadillo&quot;</span>
+<span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> arma;
+<span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> std;
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+<span style="color: #a7a7a7; font-weight: bold">int</span> <span style="color: #008b45">main</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> argc, <span style="color: #a7a7a7; font-weight: bold">char</span>** argv)
+  {
+  <span style="color: #228B22">// directly specify the matrix size (elements are uninitialised)</span>
+  mat A(<span style="color: #B452CD">2</span>,<span style="color: #B452CD">3</span>);
+  <span style="color: #228B22">// .n_rows = number of rows    (read only)</span>
+  <span style="color: #228B22">// .n_cols = number of columns (read only)</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;A.n_rows = &quot;</span> &lt;&lt; A.n_rows &lt;&lt; endl;
+  cout &lt;&lt; <span style="color: #CD5555">&quot;A.n_cols = &quot;</span> &lt;&lt; A.n_cols &lt;&lt; endl;
+  <span style="color: #228B22">// directly access an element (indexing starts at 0)</span>
+  A(<span style="color: #B452CD">1</span>,<span style="color: #B452CD">2</span>) = <span style="color: #B452CD">456.0</span>;
+  A.print(<span style="color: #CD5555">&quot;A:&quot;</span>);
+  <span style="color: #228B22">// scalars are treated as a 1x1 matrix,</span>
+  <span style="color: #228B22">// hence the code below will set A to have a size of 1x1</span>
+  A = <span style="color: #B452CD">5.0</span>;
+  A.print(<span style="color: #CD5555">&quot;A:&quot;</span>);
+  <span style="color: #228B22">// if you want a matrix with all elements set to a particular value</span>
+  <span style="color: #228B22">// the .fill() member function can be used</span>
+  A.set_size(<span style="color: #B452CD">3</span>,<span style="color: #B452CD">3</span>);
+  A.fill(<span style="color: #B452CD">5.0</span>);  A.print(<span style="color: #CD5555">&quot;A:&quot;</span>);
+</pre></div>
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized098.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized100.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

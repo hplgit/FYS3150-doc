@@ -322,34 +322,56 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0030"></a>
+<!-- !split -->
 
+<h2>From decimal to binary representation  <a name="___sec29"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
+<div class="alert alert-block alert-block alert-text-normal">
+<b>How to do it.</b>
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$
+  a_n2^n+a_{n-1}2^{n-1}  +a_{n-2}2^{n-2}  +\dots +a_{0}2^{0}.
+$$
 
 
 <p>
-<!-- institution(s) -->
+In binary notation we have thus \( (417)_{10} =(110110001)_2 \)
+since we have
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
+$$
+(110100001)_2
+=1\times2^8+1\times 2^{7}+0\times 2^{6}+1\times 2^{5}+0\times 2^{4}+0\times 2^{3}+0\times 2^{2}+0\times 2^{2}+0\times 2^{1}+1\times 2^{0}.
+$$
+
+To see this, we have performed the following divisions by 2
+
 <p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+<table border="1">
+<tr></tr>
+<tbody>
+<tr><td align="center">   417/2=208                          </td> <td align="center">   remainder 1                        </td> <td align="center">   coefficient of \( 2^{0} \) is 1    </td> </tr>
+<tr><td align="center">   208/2=104                          </td> <td align="center">   remainder 0                        </td> <td align="center">   coefficient of \( 2^{1} \) is 0    </td> </tr>
+<tr><td align="center">   104/2=52                           </td> <td align="center">   remainder 0                        </td> <td align="center">   coefficient of \( 2^{2} \) is 0    </td> </tr>
+<tr><td align="center">   52/2=26                            </td> <td align="center">   remainder 0                        </td> <td align="center">   coefficient of \( 2^{3} \) is 0    </td> </tr>
+<tr><td align="center">   26/2=13                            </td> <td align="center">   remainder 1                        </td> <td align="center">   coefficient of \( 2^{4} \) is 0    </td> </tr>
+<tr><td align="center">   13/2= 6                            </td> <td align="center">   remainder 1                        </td> <td align="center">   coefficient of \( 2^{5} \) is 1    </td> </tr>
+<tr><td align="center">   6/2= 3                             </td> <td align="center">   remainder 0                        </td> <td align="center">   coefficient of \( 2^{6} \) is 0    </td> </tr>
+<tr><td align="center">   3/2= 1                             </td> <td align="center">   remainder 1                        </td> <td align="center">   coefficient of \( 2^{7} \) is 1    </td> </tr>
+<tr><td align="center">   1/2= 0                             </td> <td align="center">   remainder 1                        </td> <td align="center">   coefficient of \( 2^{8} \) is 1    </td> </tr>
+</tbody>
+</table>
+
+</div>
+
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized029.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized031.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

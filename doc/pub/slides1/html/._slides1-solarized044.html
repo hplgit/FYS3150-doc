@@ -322,34 +322,29 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0044"></a>
+<!-- !split -->
 
+<h2>Loss of precision can cuae serious problems  <a name="___sec43"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Real Numbers.</b>
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+<ul>
+  <li> <b>Overflow</b>: When the positive exponent exceeds the max value, e.g., 308 for <code>DOUBLE PRECISION</code> (64 bits). Under such circumstances the program will terminate and some compilers may give you the warning <code>OVERFLOW</code>.</li>
+  <li> <b>Underflow</b>: When the negative exponent becomes smaller than the min value, e.g., -308 for <code>DOUBLE PRECISION</code>. Normally, the variable is then set to zero and the program continues. Other compilers (or compiler options) may warn you with the <code>UNDERFLOW</code> message and the program terminates.</li>
+</ul>
+</div>
 
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized043.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized045.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

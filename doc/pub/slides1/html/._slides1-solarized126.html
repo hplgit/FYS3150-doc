@@ -322,34 +322,61 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0126"></a>
+<!-- !split -->
+
+<h2>LU Decomposition, the inverse of a matrix  <a name="___sec130"></a></h2>
+
+If the inverse exists then
+
+$$
+   {\bf A}^{-1}{\bf A}={\bf I},
+$$
+
+the identity matrix. With an LU decomposed matrix we can rewrite the last equation as
+
+$$
+   {\bf LU}{\bf A}^{-1}={\bf I}.
+$$
+
+If we assume that the first column (that is column 1) of the inverse matrix
+can be written as a vector with unknown entries
+
+$$
+    {\bf A}_1^{-1}= \left( \begin{array}{c}
+
+                              a_{11}^{-1} \\
+                              a_{21}^{-1} \\
+                              \dots \\
+                              a_{n1}^{-1} \\
+                    \end{array} \right),
+$$
+
+then we have a linear set of equations
+
+$$
+    {\bf LU}\left( \begin{array}{c}
+
+                              a_{11}^{-1} \\
+                              a_{21}^{-1} \\
+                              \dots \\
+                              a_{n1}^{-1} \\
+                    \end{array} \right) =\left( \begin{array}{c}
+                               1 \\
+                              0 \\
+                              \dots \\
+                              0 \\
+                    \end{array} \right).
+$$
 
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized125.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized127.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

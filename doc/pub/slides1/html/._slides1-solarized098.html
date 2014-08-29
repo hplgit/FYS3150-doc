@@ -322,34 +322,33 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0098"></a>
+<!-- !split -->
 
+<h2>Armadillo, how to compile and install  <a name="___sec100"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
+For people using Ubuntu, Debian, Linux Mint, simply go to the synaptic package manager and install
+armadillo from there.
+You may have to install Lapack as well.
+For Mac and Windows users, follow the instructions from the webpage
+<a href="http://arma.sourceforge.net" target="_blank"><tt>http://arma.sourceforge.net</tt></a>.
+To compile, use for example
 
 <p>
-<!-- institution(s) -->
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%">c++ -O2 -o program.x program.cpp  -larmadillo -llapack -lblas
+</pre></div>
 <p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+where the <code>-l</code> option indicates the library you wish to link to.
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized097.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized099.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

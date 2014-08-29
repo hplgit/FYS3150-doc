@@ -322,34 +322,42 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0021"></a>
+<!-- !split -->
 
+<h2>Hello world  <a name="___sec20"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+<div class="alert alert-block alert-block alert-text-normal">
+<b>The C encounter.</b>
+<p>
+Here we present first the C version.
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span style="color: #228B22">/* comments in C begin like this and end with */</span>
+<span style="color: #1e889b">#include &lt;stdlib.h&gt; </span><span style="color: #228B22">/* atof function */</span><span style="color: #1e889b"></span>
+<span style="color: #1e889b">#include &lt;math.h&gt;   </span><span style="color: #228B22">/* sine function */</span><span style="color: #1e889b"></span>
+<span style="color: #1e889b">#include &lt;stdio.h&gt;  </span><span style="color: #228B22">/* printf function */</span><span style="color: #1e889b"></span>
+<span style="color: #a7a7a7; font-weight: bold">int</span> <span style="color: #008b45">main</span> (<span style="color: #a7a7a7; font-weight: bold">int</span> argc, <span style="color: #a7a7a7; font-weight: bold">char</span>* argv[])
+{
+  <span style="color: #a7a7a7; font-weight: bold">double</span> r, s;        <span style="color: #228B22">/* declare variables */</span>
+  r = atof(argv[<span style="color: #B452CD">1</span>]);  <span style="color: #228B22">/* convert the text argv[1] to double */</span>
+  s = sin(r);
+  printf(<span style="color: #CD5555">&quot;Hello, World! sin(%g)=%g\n&quot;</span>, r, s);
+  <span style="color: #8B008B; font-weight: bold">return</span> <span style="color: #B452CD">0</span>;           <span style="color: #228B22">/* success execution of the program */</span>
+</pre></div>
+
+</div>
 
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized020.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized022.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

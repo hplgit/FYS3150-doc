@@ -322,34 +322,28 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0046"></a>
+<!-- !split -->
 
+<h2>More on loss of precision  <a name="___sec46"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Real Numbers.</b>
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+<ul>
+  <li> <b>Loss of precision</b>: When one has to e.g., multiply two large numbers where one suspects that the outcome may be beyond the bonds imposed by the variable declaration, one could represent the numbers by logarithms, or rewrite the equations to be solved in terms of dimensionless variables. When dealing with problems in e.g., particle physics or nuclear physics where distance is measured in fm (\( 10^{-15} \) m), it can be quite convenient to redefine the variables for distance in terms of a dimensionless variable of the order of unity. To give an example, suppose you work with single precision and wish to perform the addition \( 1+10^{-8} \). In this case, the information containing in \( 10^{-8} \) is simply lost in the addition. Typically, when performing the addition, the computer equates first the exponents of the two numbers to be added. For \( 10^{-8} \) this has however catastrophic consequences since in order to obtain an exponent equal to \( 10^0 \), bits in the mantissa are shifted to the right. At the end, all bits in the mantissa are zeros.</li>
+</ul>
+</div>
 
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized045.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized047.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

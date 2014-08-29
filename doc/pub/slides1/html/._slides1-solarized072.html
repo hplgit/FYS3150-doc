@@ -322,34 +322,37 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0072"></a>
+<!-- !split -->
+
+<h2>File handling, C++-way  <a name="___sec73"></a></h2>
 
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%"><span style="color: #a7a7a7; font-weight: bold">int</span> <span style="color: #008b45">main</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> argc, <span style="color: #a7a7a7; font-weight: bold">char</span>* argv[])
+{
+  <span style="color: #a7a7a7; font-weight: bold">char</span> *outfilename;
+  <span style="color: #228B22">//Read in output file, abort if there are too</span>
+  <span style="color: #228B22">//few command-line arguments</span>
+  <span style="color: #8B008B; font-weight: bold">if</span>( argc &lt;= <span style="color: #B452CD">1</span> ){
+    cout &lt;&lt; <span style="color: #CD5555">&quot;Bad Usage: &quot;</span> &lt;&lt; argv[<span style="color: #B452CD">0</span>] &lt;&lt;
+      <span style="color: #CD5555">&quot; read also output file on same line&quot;</span> &lt;&lt; endl;
+    exit(<span style="color: #B452CD">1</span>);
+  }
+  <span style="color: #8B008B; font-weight: bold">else</span>{
+    outfilename=argv[<span style="color: #B452CD">1</span>];
+  }
+  ofile.open(outfilename);
+  .....
+  ofile.close();  <span style="color: #228B22">// close output file</span>
+</pre></div>
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized071.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized073.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

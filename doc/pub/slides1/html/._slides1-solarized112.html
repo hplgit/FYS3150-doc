@@ -322,34 +322,48 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0112"></a>
+<!-- !split -->
+
+<h2>Gaussian Elimination and Tridiagonal matrices, project 1  <a name="___sec114"></a></h2>
+
+We can rewrite our original differential equation in terms of a discretized equation with approximations to the
+derivatives as
+
+$$
+    -\frac{u_{i+1} -2u_i +u_{i-i}}{h^2}=f(x_i,u(x_i)),
+$$
+
+with \( i=1,2,\dots, n \). We need to add to this system the two boundary conditions \( u(a) =u_0 \) and \( u(b) = u_{n+1} \).
+If we define a matrix
+
+$$
+    {\bf A} = \frac{1}{h^2}\left(\begin{array}{cccccc}
+                          2 & -1 &  &   &  & \\
+                          -1 & 2 & -1 & & & \\
+                           & -1 & 2 & -1 & &  \\
+                           & \dots   & \dots &\dots   &\dots & \dots \\
+                           &   &  &-1  &2& -1 \\
+                           &    &  &   &-1 & 2 \\
+                      \end{array} \right)
+$$
+
+and the corresponding vectors \( {\bf u} = (u_1, u_2, \dots,u_n)^T \) and
+\( {\bf f}({\bf u}) = f(x_1,x_2,\dots, x_n,u_1, u_2, \dots,u_n)^T \)  we can rewrite the differential equation
+including the boundary conditions as a system of linear equations with  a large number of unknowns
+
+$$
+   {\bf A}{\bf u} = {\bf f}({\bf u}).
+$$
 
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized111.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized113.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

@@ -322,34 +322,50 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0022"></a>
+<!-- !split -->
 
+<h2>Hello World  <a name="___sec21"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Dissection I.</b>
+<p>
+The compiler must see a declaration of a function before you can
+call it (the compiler checks the argument and return types).
+The declaration of library functions appears
+in so-called &quot;header files&quot; that must be included in the program, e.g.,
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%">   <span style="color: #a61717; background-color: #e3d2d2">#</span>include &lt;stdlib.h&gt; <span style="color: #228B22">/* atof function */</span>
+</pre></div>
+<p>
+We call three functions (atof, sin, printf)
+and these are declared in three different header files.
+The main program is a function called main
+with a return value set to an integer, int (0 if success).
+The operating system stores the return value,
+and other programs/utilities can check whether
+the execution was successful or not.
+The command-line arguments are transferred to the main function through
 
 <p>
-<!-- institution(s) -->
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%">   <span style="color: #a7a7a7; font-weight: bold">int</span> main (<span style="color: #a7a7a7; font-weight: bold">int</span> argc, <span style="color: #a7a7a7; font-weight: bold">char</span>* argv[])
+</pre></div>
+
+</div>
+
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized021.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized023.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

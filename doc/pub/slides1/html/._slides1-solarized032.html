@@ -322,34 +322,49 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0032"></a>
+<!-- !split -->
 
+<h2>From decimal to binary representation  <a name="___sec31"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Integer numbers, Fortran.</b>
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
 <p>
-<!-- institution(s) -->
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+<!-- code=fortran (!bc fcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span style="color: #8B008B; font-weight: bold">PROGRAM </span><span style="color: #00688B">binary_integer</span>
+<span style="color: #8B008B; font-weight: bold">IMPLICIT NONE</span>
+<span style="color: #8B008B; font-weight: bold">  </span><span style="color: #a7a7a7; font-weight: bold">INTEGER  </span><span style="color: #00688B">i</span>, <span style="color: #00688B">number</span>, <span style="color: #00688B">terms</span>(<span style="color: #B452CD">0</span>:<span style="color: #B452CD">31</span>) <span style="color: #228B22">! storage of a0, a1, etc, up to 32 bits</span>
+
+  <span style="color: #8B008B; font-weight: bold">WRITE</span>(*,*) <span style="color: #CD5555">&#39;Give a number to transform to binary notation&#39;</span>
+  <span style="color: #8B008B; font-weight: bold">READ</span>(*,*) <span style="color: #00688B">number</span>
+<span style="color: #228B22">! Initialise the terms a0, a1 etc</span>
+  <span style="color: #00688B">terms</span> = <span style="color: #B452CD">0</span>
+<span style="color: #228B22">! Fortran takes only integer loop variables</span>
+  <span style="color: #8B008B; font-weight: bold">DO </span><span style="color: #00688B">i</span>=<span style="color: #B452CD">0</span>, <span style="color: #B452CD">31</span>
+     <span style="color: #00688B">terms</span>(<span style="color: #00688B">i</span>) = <span style="color: #658b00">MOD</span>(<span style="color: #00688B">number</span>,<span style="color: #B452CD">2</span>)
+     <span style="color: #00688B">number</span> = <span style="color: #00688B">number</span>/<span style="color: #B452CD">2</span>
+  <span style="color: #00688B">ENDDO</span>
+<span style="color: #228B22">! write out results</span>
+  <span style="color: #8B008B; font-weight: bold">WRITE</span>(*,*) <span style="color: #CD5555">&#39;Binary representation &#39;</span>
+  <span style="color: #8B008B; font-weight: bold">DO </span><span style="color: #00688B">i</span>=<span style="color: #B452CD">0</span>, <span style="color: #B452CD">31</span>
+    <span style="color: #8B008B; font-weight: bold">WRITE</span>(*,*)<span style="color: #CD5555">&#39; Term nr and value&#39;</span>, <span style="color: #00688B">i</span>, <span style="color: #00688B">terms</span>(<span style="color: #00688B">i</span>)
+  <span style="color: #00688B">ENDDO</span>
+
+<span style="color: #8B008B; font-weight: bold">END PROGRAM </span><span style="color: #00688B">binary_integer</span>
+</pre></div>
+
+</div>
+
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized031.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized033.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

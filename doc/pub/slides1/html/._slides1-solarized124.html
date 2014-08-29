@@ -322,34 +322,47 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0124"></a>
+<!-- !split -->
 
+<h2>LU Decomposition, why?  <a name="___sec128"></a></h2>
 
+For our four-dimentional example this takes the form
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+$$
+\begin{align}
+ y_1=&w_1 \nonumber\\
+l_{21}y_1 + y_2=&w_2\nonumber \\
+l_{31}y_1 + l_{32}y_2 + y_3 =&w_3\nonumber \\
+l_{41}y_1 + l_{42}y_2 + l_{43}y_3 + y_4=&w_4. \nonumber
+\end{align}
+$$
+
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+and
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$
+\begin{align}
+ u_{11}x_1 +u_{12}x_2 +u_{13}x_3 + u_{14}x_4=&y_1 \nonumber\\
+u_{22}x_2 + u_{23}x_3 + u_{24}x_4=&y_2\nonumber \\
+u_{33}x_3 + u_{34}x_4=&y_3\nonumber \\
+u_{44}x_4=&y_4  \nonumber
+\end{align}
+$$
 
 
 <p>
-<!-- institution(s) -->
+This example shows the basis for the algorithm
+needed to solve the set of \( n \) linear equations.
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized123.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized125.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

@@ -322,34 +322,47 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0057"></a>
+<!-- !split -->
 
+<h2>Error Analysis  <a name="___sec57"></a></h2>
 
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+If we were not to worry about loss of precision, we could in principle
+make \( h \) as small as possible.
+However, due to the computed expression in the above program example
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+$$
+ f_0''=\frac{ f_h -2f_0 +f_{-h}}{h^2}=\frac{ (f_h -f_0) +(f_{-h}-f_0)}{h^2},
+$$
+
+we reach fairly quickly a limit for where loss of precision due to the subtraction
+of two nearly equal numbers becomes crucial.
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
+If \( (f_{\pm h} -f_0) \) are very close, we have
+\( (f_{\pm h} -f_0)\approx \epsilon_M \), where \( |\epsilon_M|\le 10^{-7} \) for single and
+\( |\epsilon_M|\le 10^{-15} \) for double precision, respectively.
 
 <p>
-<!-- institution(s) -->
+We have then
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+$$
+ \left|f_0''\right|=
+ \left|\frac{ (f_h -f_0) +(f_{-h}-f_0)}{h^2}\right|\le \frac{ 2 \epsilon_M}{h^2}.
+$$
+</div>
+
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized056.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized058.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

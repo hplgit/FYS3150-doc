@@ -322,34 +322,49 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0036"></a>
+<!-- !split -->
 
+<h2>Loss of Precision  <a name="___sec35"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Machine Numbers.</b>
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+A modification of the scientific notation for binary numbers is to
+require that the leading binary digit 1 appears to the left of the binary point.
+In this case the representation of the mantissa \( q \) would be
+\( (1.f)_2 \) and $ 1 \le q < 2$. This form is rather useful when storing
+binary numbers in a computer word, since we can always assume that the leading
+bit 1 is there. One bit of space can then be saved meaning that a 23 bits
+mantissa has actually 24 bits. This means explicitely that a binary number with 23 bits
+for the mantissa reads
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$
+\begin{equation}
+(1.a_{-1}a_{-2}\dots a_{-23})_2=1\times 2^0+a_{-1}\times 2^{-1}+
++a_{-2}\times 2^{-2}+\dots+a_{-23}\times 2^{-23}.
+\end{equation}
+$$
+
+As an example, consider the 32 bits binary number
+
+$$
+(10111110111101000000000000000000)_2,
+$$
+
+where the first bit is reserved for the sign, 1 in this case yielding a
+negative sign. The exponent \( m \) is given by the next 8 binary numbers
+\( 01111101 \) resulting in 125 in the decimal system.
+</div>
 
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized035.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized037.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

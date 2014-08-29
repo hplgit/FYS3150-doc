@@ -322,34 +322,46 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0123"></a>
+<!-- !split -->
 
+<h2>LU Decomposition, linear equations  <a name="___sec127"></a></h2>
 
+The previous equation can be calculated in two steps
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$ {\bf L} {\bf y} = {\bf w};\qquad {\bf Ux}={\bf y}. $$
 
 
 <p>
-<!-- institution(s) -->
+To show that this is correct we use to the LU decomposition
+to rewrite our system of linear equations as
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+$$  {\bf LUx}={\bf w}, $$
+
+and since the determinat of \( {\bf L} \) is equal to 1 (by construction
+since the diagonals of \( {\bf L} \) equal 1) we can use the inverse of
+\( {\bf L} \) to obtain
+
+$$
+   {\bf Ux}={\bf L^{-1}w}={\bf y},
+$$
+
+which yields the intermediate step
+
+$$
+   {\bf L^{-1}w}={\bf y}
+$$
+
+and as soon as we have \( {\bf y} \) we can obtain \( {\bf x} \)
+through \( {\bf Ux}={\bf y} \).
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized122.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized124.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

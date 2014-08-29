@@ -322,34 +322,45 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0101"></a>
+<!-- !split -->
+
+<h2>Armadillo, simple examples  <a name="___sec103"></a></h2>
 
 
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%">  <span style="color: #228B22">// submatrix types:</span>
+  <span style="color: #228B22">//</span>
+  <span style="color: #228B22">// .submat(first_row, first_column, last_row, last_column)</span>
+  <span style="color: #228B22">// .row(row_number)</span>
+  <span style="color: #228B22">// .col(column_number)</span>
+  <span style="color: #228B22">// .cols(first_column, last_column)</span>
+  <span style="color: #228B22">// .rows(first_row, last_row)</span>
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+  cout &lt;&lt; <span style="color: #CD5555">&quot;C.submat(0,0,3,1) =&quot;</span> &lt;&lt; endl;
+  cout &lt;&lt; C.submat(<span style="color: #B452CD">0</span>,<span style="color: #B452CD">0</span>,<span style="color: #B452CD">3</span>,<span style="color: #B452CD">1</span>) &lt;&lt; endl;
 
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
+  <span style="color: #228B22">// generate the identity matrix</span>
+  mat D = eye&lt;mat&gt;(<span style="color: #B452CD">4</span>,<span style="color: #B452CD">4</span>);
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+  D.submat(<span style="color: #B452CD">0</span>,<span style="color: #B452CD">0</span>,<span style="color: #B452CD">3</span>,<span style="color: #B452CD">1</span>) = C.cols(<span style="color: #B452CD">1</span>,<span style="color: #B452CD">2</span>);
+  D.print(<span style="color: #CD5555">&quot;D:&quot;</span>);
 
+  <span style="color: #228B22">// transpose</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;trans(B) =&quot;</span> &lt;&lt; endl;
+  cout &lt;&lt; trans(B) &lt;&lt; endl;
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+  <span style="color: #228B22">// maximum from each column (traverse along rows)</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;max(B) =&quot;</span> &lt;&lt; endl;
+  cout &lt;&lt; max(B) &lt;&lt; endl;
+</pre></div>
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized100.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized102.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

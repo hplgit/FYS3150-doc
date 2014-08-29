@@ -322,34 +322,44 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0103"></a>
+<!-- !split -->
+
+<h2>Armadillo, simple examples  <a name="___sec105"></a></h2>
 
 
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%">  <span style="color: #228B22">// row vectors are treated like a matrix with one row</span>
+  rowvec r;
+  r &lt;&lt; <span style="color: #B452CD">0.59499</span> &lt;&lt; <span style="color: #B452CD">0.88807</span> &lt;&lt; <span style="color: #B452CD">0.88532</span> &lt;&lt; <span style="color: #B452CD">0.19968</span>;
+  r.print(<span style="color: #CD5555">&quot;r:&quot;</span>);
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+  <span style="color: #228B22">// column vectors are treated like a matrix with one column</span>
+  colvec q;
+  q &lt;&lt; <span style="color: #B452CD">0.81114</span> &lt;&lt; <span style="color: #B452CD">0.06256</span> &lt;&lt; <span style="color: #B452CD">0.95989</span> &lt;&lt; <span style="color: #B452CD">0.73628</span>;
+  q.print(<span style="color: #CD5555">&quot;q:&quot;</span>);
 
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
+  <span style="color: #228B22">// dot or inner product</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;as_scalar(r*q) = &quot;</span> &lt;&lt; as_scalar(r*q) &lt;&lt; endl;
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+    <span style="color: #228B22">// outer product</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;q*r =&quot;</span> &lt;&lt; endl;
+  cout &lt;&lt; q*r &lt;&lt; endl;
 
 
-<p>
-<!-- institution(s) -->
+  <span style="color: #228B22">// sum of three matrices (no temporary matrices are created)</span>
+  mat F = B + C + D;
+  F.print(<span style="color: #CD5555">&quot;F:&quot;</span>);
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+    <span style="color: #8B008B; font-weight: bold">return</span> <span style="color: #B452CD">0</span>;
+</pre></div>
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized102.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized104.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

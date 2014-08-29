@@ -322,34 +322,39 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0042"></a>
+<!-- !split -->
 
+<h2>Loss of numerical precision  <a name="___sec41"></a></h2>
 
+The first expression for \( f(x) \) results in
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+$$
+   f(x)=\frac{1-0.99998}{0.69999\times 10^{-2}}=\frac{0.2\times 10^{-4}}{0.69999\times 10^{-2}}=0.28572\times 10^{-2},
+$$
 
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
+while the second expression results in
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$
+   f(x)=\frac{0.69999\times 10^{-2}}{1+0.99998}=
+\frac{0.69999\times 10^{-2}}{1.99998}=0.35000\times 10^{-2},
+$$
 
+which is also the exact result. In the first expression, due to our
+choice of precision, we have
+only one relevant digit in the numerator, after the
+subtraction. This leads to a loss of precision and a wrong result due to
+a cancellation of two nearly equal numbers.
+If we had chosen a precision of six leading digits, both expressions
+yield the same answer.
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized041.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized043.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

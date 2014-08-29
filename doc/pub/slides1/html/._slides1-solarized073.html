@@ -322,34 +322,35 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0073"></a>
+<!-- !split -->
+
+<h2>File handling, C++-way  <a name="___sec74"></a></h2>
 
 
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%"><span style="color: #a7a7a7; font-weight: bold">void</span> <span style="color: #008b45">output</span>(<span style="color: #a7a7a7; font-weight: bold">double</span> r_min , <span style="color: #a7a7a7; font-weight: bold">double</span> r_max, <span style="color: #a7a7a7; font-weight: bold">int</span> max_step,
+            <span style="color: #a7a7a7; font-weight: bold">double</span> *d)
+{
+<span style="color: #a7a7a7; font-weight: bold">int</span> i;
+ofile &lt;&lt; <span style="color: #CD5555">&quot;RESULTS:&quot;</span> &lt;&lt; endl;
+ofile &lt;&lt; setiosflags(ios::showpoint | ios::uppercase);
+ofile &lt;&lt;<span style="color: #CD5555">&quot;R_min = &quot;</span> &lt;&lt; setw(<span style="color: #B452CD">15</span>) &lt;&lt; setprecision(<span style="color: #B452CD">8</span>) &lt;&lt;r_min &lt;&lt;endl;
+ofile &lt;&lt;<span style="color: #CD5555">&quot;R_max = &quot;</span> &lt;&lt; setw(<span style="color: #B452CD">15</span>) &lt;&lt; setprecision(<span style="color: #B452CD">8</span>) &lt;&lt;r_max &lt;&lt;endl;
+ofile &lt;&lt;<span style="color: #CD5555">&quot;Number of steps = &quot;</span> &lt;&lt; setw(<span style="color: #B452CD">15</span>) &lt;&lt; max_step &lt;&lt; endl;
+ofile &lt;&lt; <span style="color: #CD5555">&quot;Five lowest eigenvalues:&quot;</span> &lt;&lt; endl;
+<span style="color: #8B008B; font-weight: bold">for</span>(i = <span style="color: #B452CD">0</span>; i &lt; <span style="color: #B452CD">5</span>; i++) {
+    ofile &lt;&lt; setw(<span style="color: #B452CD">15</span>) &lt;&lt; setprecision(<span style="color: #B452CD">8</span>) &lt;&lt; d[i] &lt;&lt; endl;
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+}  <span style="color: #228B22">// end of function output</span>
+</pre></div>
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized072.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized074.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

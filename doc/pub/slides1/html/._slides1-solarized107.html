@@ -322,34 +322,46 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0107"></a>
+<!-- !split -->
 
+<h2>Gaussian Elimination  <a name="___sec109"></a></h2>
 
+The basic idea of Gaussian elimination is to use the first equation to eliminate the first unknown \( x_1 \)
+from the remaining \( n-1 \) equations. Then we use the new second equation to eliminate the second unknown
+\( x_2 \) from the remaining \( n-2 \) equations. With \( n-1 \) such eliminations
+we obtain a so-called upper triangular set of equations of the form
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+$$
+\begin{align}label{eq:gaussbacksub}
+ b_{11}x_1 +b_{12}x_2 +b_{13}x_3 + b_{14}x_4=&y_1 \nonumber \\
+ b_{22}x_2 + b_{23}x_3 + b_{24}x_4=&y_2 \nonumber \\
+b_{33}x_3 + b_{34}x_4=&y_3 \nonumber \\
+b_{44}x_4=&y_4. \nonumber
+\end{align}
+$$
 
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
+We can solve this system of equations recursively starting from \( x_n \) (in our case \( x_4 \)) and proceed with
+what is called a backward substitution. This process can be expressed mathematically as
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$
+\begin{equation}
+   x_m = \frac{1}{b_{mm}}\left(y_m-\sum_{k=m+1}^nb_{mk}x_k\right)\quad m=n-1,n-2,\dots,1.
+\end{equation}
+$$
 
+To arrive at such an upper triangular system of equations, we start by eliminating
+the unknown \( x_1 \) for \( j=2,n \). We achieve this by multiplying the first equation by \( a_{j1}/a_{11} \) and then subtract
+the result from the $j$th equation. We assume obviously that \( a_{11}\ne 0 \) and that
+\( {\bf A} \) is not singular.
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized106.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized108.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

@@ -322,34 +322,79 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0121"></a>
+<!-- !split -->
 
+<h2>Linear Algebra Methods  <a name="___sec123"></a></h2>
 
+<ul>
+  <li> Gaussian elimination, \( O(2/3n^3) \) flops, general matrix</li>
+  <li> LU decomposition, upper triangular and lower tridiagonal matrices, \( O(2/3n^3) \) flops, general matrix. Get easily the inverse, determinant and can solve linear equations with back-substitution only, \( O(n^2) \) flops</li>
+  <li> Cholesky decomposition \( A=LL^T \). Real symmetric or hermitian positive definite matrix, \( O(1/3n^3) \) flops.</li>
+  <li> Tridiagonal linear systems, important for differential equations. Normally positive definite and non-singular. \( O(8n) \) flops for symmetric. \( A=LDL^T \) with \( D \) the diagonal. Special case of banded matrices.</li>
+  <li> Singular value decomposition</li>
+  <li> the QR method will be discussed in chapter 7 in connection with eigenvalue systems. \( O(4/3n^3) \) flops. !split</li>
+</ul>
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+<h2>LU Decomposition  <a name="___sec124"></a></h2>
+
+The LU decomposition method means that we can rewrite
+this matrix as the product of two matrices \( {\bf L} \) and \( {\bf U} \)
+where
+
+$$
+\tag{8}
+   \left(\begin{array}{cccc}
+                          a_{11} & a_{12} & a_{13} & a_{14} \\
+                          a_{21} & a_{22} & a_{23} & a_{24} \\
+                          a_{31} & a_{32} & a_{33} & a_{34} \\
+                          a_{41} & a_{42} & a_{43} & a_{44}
+                      \end{array} \right)
+                      = \left( \begin{array}{cccc}
+                              1  & 0      & 0      & 0 \\
+                          l_{21} & 1      & 0      & 0 \\
+                          l_{31} & l_{32} & 1      & 0 \\
+                          l_{41} & l_{42} & l_{43} & 1
+                      \end{array} \right)
+                        \left( \begin{array}{cccc}
+                          u_{11} & u_{12} & u_{13} & u_{14} \\
+                               0 & u_{22} & u_{23} & u_{24} \\
+                               0 & 0      & u_{33} & u_{34} \\
+                               0 & 0      &  0     & u_{44}
+             \end{array} \right).
+$$
+
+LU decomposition forms the backbone of other algorithms in linear algebra, such as the
+solution of linear equations given by
+
+$$
+\begin{align}
+ a_{11}x_1 +a_{12}x_2 +a_{13}x_3 + a_{14}x_4=&w_1 \nonumber \\
+a_{21}x_1 + a_{22}x_2 + a_{23}x_3 + a_{24}x_4=&w_2 \nonumber \\
+a_{31}x_1 + a_{32}x_2 + a_{33}x_3 + a_{34}x_4=&w_3 \nonumber \\
+a_{41}x_1 + a_{42}x_2 + a_{43}x_3 + a_{44}x_4=&w_4.  \nonumber
+\end{align}
+$$
+
+The above set of equations is conveniently solved by using LU decomposition as an intermediate step.
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+The matrix \( {\bf A}\in \mathbb{R}^{n\times n} \) has an LU factorization if the determinant
+is different from zero. If the LU factorization exists and \( {\bf A} \) is non-singular, then the LU factorization
+is unique and the determinant is given by
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$
+det\{{\bf A}\}=det\{{\bf LU}\}= det\{{\bf L}\}det\{{\bf U}\}=u_{11}u_{22}\dots u_{nn}.
+$$
 
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized120.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized122.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

@@ -322,34 +322,59 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0034"></a>
+<!-- !split -->
 
+<h2>Loss of Precision  <a name="___sec33"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Machine Numbers.</b>
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+In the decimal system we would write a number like \( 9.90625 \)
+in what is called the normalized scientific notation.
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$
+  9.90625=0.990625\times 10^{1},
+$$
+
+and a real non-zero number could be generalized as
+
+$$
+\begin{equation}
+    x=\pm r\times 10^{{\mbox{n}}},
+\end{equation}
+$$
+
+with \( r \) a number in the range \( 1/10 \le r < 1 \).
+In a similar way we can use represent a binary number in
+scientific notation as
+
+$$
+\begin{equation}
+    x=\pm q\times 2^{{\mbox{m}}},
+\end{equation}
+$$
+
+with \( q \) a number in the range \( 1/2 \le q < 1 \).
+This means that the mantissa of a binary number would be represented by
+the general formula
+
+$$
+\begin{equation}
+(0.a_{-1}a_{-2}\dots a_{-n})_2=a_{-1}\times 2^{-1}
++a_{-2}\times 2^{-2}+\dots+a_{-n}\times 2^{-n}.
+\end{equation}
+$$
+</div>
 
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized033.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized035.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

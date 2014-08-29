@@ -322,34 +322,35 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0150"></a>
+<!-- !split -->
 
+<h2>Programming classes  <a name="___sec156"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
+The first public function we encounter is a so-called
+constructor, which  tells how we declare a variable of type <code>Complex</code>
+and how this variable is initialized. We have chose  three possibilities in the example above:
 
 <p>
-<!-- institution(s) -->
+A declaration like <code>Complex c;</code> calls the member function <code>Complex()</code> which can have the following implementation
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
 <p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%">Complex:: Complex () { re = im = <span style="color: #B452CD">0.0</span>; }
+</pre></div>
+<p>
+meaning that it sets the real and imaginary parts to zero. Note the
+way a member function is defined. The constructor is the first
+function that is called when an object is instantiated.
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized149.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized151.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

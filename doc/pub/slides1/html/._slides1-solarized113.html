@@ -322,34 +322,41 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0113"></a>
+<!-- !split -->
 
+<h2>Gaussian Elimination and Tridiagonal matrices, project 1  <a name="___sec115"></a></h2>
 
+We start with the linear set of equations
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+$$
+   {\bf A}{\bf u} = {\bf f},
+$$
 
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
+where \( {\bf A} \) is a tridiagonal matrix which we rewrite as
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$
+    {\bf A} = \left(\begin{array}{cccccc}
+                           b_1& c_1 & 0 &\dots   & \dots &\dots \\
+                           a_2 & b_2 & c_2 &\dots &\dots &\dots \\
+                           & a_3 & b_3 & c_3 & \dots & \dots \\
+                           & \dots   & \dots &\dots   &\dots & \dots \\
+                           &   &  &a_{n-2}  &b_{n-1}& c_{n-1} \\
+                           &    &  &   &a_n & b_n \\
+                      \end{array} \right)
+$$
 
+where \( a,b,c \) are one-dimensional arrays of length \( 1:n \).
+In project 1 the arrays \( a \) and \( c \) are equal, namely \( a_i=c_i=-1/h^2 \).
+The matrix is  also positive definite.
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized112.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized114.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

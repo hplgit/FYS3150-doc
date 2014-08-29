@@ -322,34 +322,68 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0039"></a>
+<!-- !split -->
 
+<h2>Loss of Precision  <a name="___sec38"></a></h2>
 
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Machine Numbers.</b>
+<p>
+In the machine a number is represented as
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+$$
+\begin{equation}
+  fl(x)= x(1+\epsilon)
+\end{equation}
+$$
+
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+where \( |\epsilon| \leq \epsilon_M \) and \( \epsilon \) is given by the
+specified precision, \( 10^{-7} \) for single and \( 10^{-16} \) for double
+precision, respectively.
+\( \epsilon_M \) is the given precision.
+In case of a subtraction \( a=b-c \), we have
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$
+\begin{equation}
+   fl(a)=fl(b)-fl(c) = a(1+\epsilon_a),
+\end{equation}
+$$
+
+or
+
+$$
+\begin{equation}
+   fl(a)=b(1+\epsilon_b)-c(1+\epsilon_c),
+\end{equation}
+$$
 
 
 <p>
-<!-- institution(s) -->
+meaning that
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
+$$
+\begin{equation}
+   fl(a)/a=1+\epsilon_b\frac{b}{a}- \epsilon_c\frac{c}{a},
+\end{equation}
+$$
+
+
 <p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+and if \( b\approx c \) we see that there is a potential for an increased
+error in \( fl(a) \).
+</div>
+
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized038.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized040.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

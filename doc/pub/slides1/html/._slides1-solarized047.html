@@ -322,34 +322,42 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0047"></a>
+<!-- !split -->
 
+<h2>A problematic case  <a name="___sec47"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Three ways of computing \( e^{-x} \).</b>
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+Brute force:
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$\exp{(-x)}=\sum_{n=0}^{\infty}(-1)^n\frac{x^n}{n!}$$
 
 
 <p>
-<!-- institution(s) -->
+Recursion relation for
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+$$ \exp{(-x)}=\sum_{n=0}^{\infty}s_n=\sum_{n=0}^{\infty}(-1)^n\frac{x^n}{n!} $$
+
+
+$$ s_n=-s_{n-1}\frac{x}{n}, $$
+
+
+$$ \exp{(x)}=\sum_{n=0}^{\infty}s_n $$
+
+
+$$ \exp{(-x)}=\frac{1}{\exp{(x)}} $$
+</div>
+
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized046.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized048.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

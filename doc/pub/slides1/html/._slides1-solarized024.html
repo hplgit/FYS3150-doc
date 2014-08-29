@@ -322,34 +322,44 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0024"></a>
+<!-- !split -->
 
+<h2>Hello World  <a name="___sec23"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Now in C++.</b>
+<p>
+Here we present first the C++ version.
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span style="color: #228B22">// A comment line begins like this in C++ programs</span>
+<span style="color: #228B22">// Standard ANSI-C++ include files</span>
+<span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> std
+<span style="color: #1e889b">#include &lt;iostream&gt;  </span><span style="color: #228B22">// input and output</span>
+<span style="color: #a7a7a7; font-weight: bold">int</span> main (<span style="color: #a7a7a7; font-weight: bold">int</span> argc, <span style="color: #a7a7a7; font-weight: bold">char</span>* argv[])
+{
+  <span style="color: #228B22">// convert the text argv[1] to double using atof:</span>
+  <span style="color: #a7a7a7; font-weight: bold">double</span> r = atof(argv[<span style="color: #B452CD">1</span>]);
+  <span style="color: #a7a7a7; font-weight: bold">double</span> s = sin(r);
+  cout &lt;&lt; <span style="color: #CD5555">&quot;Hello, World! sin(&quot;</span> &lt;&lt; r &lt;&lt; <span style="color: #CD5555">&quot;)=&quot;</span> &lt;&lt; s &lt;&lt; <span style="color: #CD5555">&#39;\n&#39;</span>;
+  <span style="color: #228B22">// success</span>
+  <span style="color: #8B008B; font-weight: bold">return</span> <span style="color: #B452CD">0</span>;
+}
+</pre></div>
+
+</div>
 
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized023.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized025.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

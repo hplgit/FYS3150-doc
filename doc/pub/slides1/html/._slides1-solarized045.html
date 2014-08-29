@@ -322,34 +322,40 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0045"></a>
+<!-- !split -->
 
+<h2>Loss of precision, real numbers  <a name="___sec44"></a></h2>
 
+<h3>Roundoff errors  <a name="___sec45"></a></h3>
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+A floating point number like
 
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
+$$
+\begin{equation}
+   x= 1.234567891112131468 = 0.1234567891112131468\times 10^{1}
+\end{equation}
+$$
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+may be stored in the following way. The exponent is  small
+and is stored in full precision. However,
+the mantissa is not stored fully. In double precision (64 bits), digits
+beyond the
+15th are lost since the mantissa is normally stored in two words,
+one which is the most significant one representing
+123456 and the least significant one containing 789111213. The digits
+beyond 3 are lost. Clearly, if we are summing alternating series
+with large numbers, subtractions between two large numbers may lead
+to roundoff errors, since not all relevant digits are kept.
+This leads eventually to the next problem, namely
 
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized044.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized046.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

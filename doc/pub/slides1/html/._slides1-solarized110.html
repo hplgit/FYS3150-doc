@@ -322,34 +322,48 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0110"></a>
+<!-- !split -->
 
+<h2>Gaussian Elimination  <a name="___sec112"></a></h2>
 
+This step is called forward substitution.
+Proceeding with these substitutions, we obtain the
+general expressions for the new coefficients
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+$$
+\begin{equation}
+   a_{jk}^{(m+1)} = a_{jk}^{(m)}-\frac{a_{jm}^{(m)}a_{mk}^{(m)}}{a_{mm}^{(m)}} \quad j,k=m+1,\dots,n,
+\end{equation}
+$$
+
+with \( m=1,\dots,n-1 \) and a
+right-hand side given by
+
+$$
+\begin{equation}
+   w_j^{(m+1)} =w_j^{(m)}-\frac{a_{jm}^{(m)}w_m^{(m)}}{a_{mm}^{(m)}}\quad j=m+1,\dots,n.
+\end{equation}
+$$
+
+This set of \( n-1 \) elimations leads us to an equations which is solved by back substitution.
+If the arithmetics is exact and the matrix \( {\bf A} \) is not singular, then the computed answer will be exact.
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+Even though the matrix elements along the diagonal are not zero,
+numerically small numbers may appear and subsequent divisions may lead to large numbers, which, if added
+to a small number may yield losses of precision. Suppose for example that our first division in \( (a_{22}-a_{21}a_{12}/a_{11}) \)
+results in \( -10^{-7} \) and that \( a_{22} \) is one.
+one. We are then
+adding \( 10^7+1 \). With single precision this results in \( 10^7 \).
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized109.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized111.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

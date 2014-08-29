@@ -322,34 +322,38 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0130"></a>
+<!-- !split -->
+
+<h2>How to use the Library functions  <a name="___sec134"></a></h2>
 
 
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%">  <span style="color: #228B22">// find inverse of a[][] by columns</span>
+  <span style="color: #8B008B; font-weight: bold">for</span>(j = <span style="color: #B452CD">0</span>; j &lt; n; j++) {
+    <span style="color: #228B22">// initialize right-side of linear equations</span>
+    <span style="color: #8B008B; font-weight: bold">for</span>(i = <span style="color: #B452CD">0</span>; i &lt; n; i++) col[i] = <span style="color: #B452CD">0.0</span>;
+    col[j] = <span style="color: #B452CD">1.0</span>;
+    lubksb(a, n, indx, col);
+    <span style="color: #228B22">// save result in y[][]</span>
+    <span style="color: #8B008B; font-weight: bold">for</span>(i = <span style="color: #B452CD">0</span>; i &lt; n; i++) y[i][j] = col[i];
+  }   <span style="color: #228B22">//j-loop over columns</span>
+  <span style="color: #228B22">// return the inverse matrix in a[][]</span>
+  <span style="color: #8B008B; font-weight: bold">for</span>(i = <span style="color: #B452CD">0</span>; i &lt; n; i++) {
+    <span style="color: #8B008B; font-weight: bold">for</span>(j = <span style="color: #B452CD">0</span>; j &lt; n; j++) a[i][j] = y[i][j];
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+  free_matrix((<span style="color: #a7a7a7; font-weight: bold">void</span> **) y);     <span style="color: #228B22">// release local memory</span>
+  <span style="color: #8B008B; font-weight: bold">delete</span> [] col;
+  <span style="color: #8B008B; font-weight: bold">delete</span> []indx;
+}  <span style="color: #228B22">// End: function inverse()</span>
+</pre></div>
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized129.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized131.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

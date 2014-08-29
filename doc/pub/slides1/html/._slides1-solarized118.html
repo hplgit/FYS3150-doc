@@ -322,34 +322,39 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0118"></a>
+<!-- !split -->
 
+<h2>Gaussian Elimination and Tridiagonal matrices, project 1  <a name="___sec120"></a></h2>
 
+Note that our sums start with \( i=1 \) and that one  should avoid cases with \( b_1=0 \). If that is the case, you should rewrite the equations
+as a set of order \( n-1 \) with \( u_2 \) eliminated. However, a tridiagonal matrix problem is not a guarantee that we
+can find a solution. The matrix \( {\bf A} \) which rephrases a second derivative in a discretized form
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+$$
+    {\bf A} = \left(\begin{array}{cccccc}
+                          2 & -1 & 0 & 0  &0  & 0\\
+                          -1 & 2 & -1 &0 &0 &0 \\
+                          0 & -1 & 2 & -1 & 0& 0 \\
+                          0 & \dots   & \dots & \dots   &\dots & \dots \\
+                          0 &0   &0  &-1  &2& -1 \\
+                          0 &  0  &0  &0   &-1 & 2 \\
+                      \end{array} \right),
+$$
 
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
+fulfills the condition of a weak dominance of the diagonal, with
+\( |b_1| > |c_1| \), \( |b_n| > |a_n| \) and  \( |b_k| \ge |a_k|+|c_k| \) for \( k=2,3,\dots,n-1 \).
+This is a relevant but not sufficient condition to guarantee that the matrix \( {\bf A} \) yields a solution to a linear
+equation problem. The matrix needs also to be irreducible. A tridiagonal irreducible matrix means that all the elements \( a_i \) and
+\( c_i \) are non-zero. If these two conditions are present, then \( {\bf A} \) is nonsingular and has a unique LU decomposition.
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized117.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized119.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

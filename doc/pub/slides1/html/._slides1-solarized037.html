@@ -322,34 +322,49 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0037"></a>
+<!-- !split -->
+
+<h2>Loss of Precision  <a name="___sec36"></a></h2>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Machine Numbers.</b>
+<p>
+However, since the
+exponent has eight bits, this means it has  \( 2^8-1=255 \) possible numbers in the interval
+\( -128 \le m \le 127 \), our final
+exponent is \( 125-127=-2 \) resulting in \( 2^{-2} \).
+Inserting the sign and the mantissa yields the final number in the decimal representation as
+
+$$
+ -2^{-2}\left(1\times 2^0+1\times 2^{-1}+
+1\times 2^{-2}+1\times 2^{-3}+0\times 2^{-4}+1\times 2^{-5}\right)=$$
 
 
+$$
+(-0.4765625)_{10}.
+$$
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+In this case we have an exact machine representation with 32 bits (actually, we need less than
+23 bits for the mantissa).
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+If our number \( x \) can be exactly represented in the machine, we call
+\( x \) a machine number. Unfortunately, most numbers cannot  and are thereby
+only approximated in the machine. When such a number occurs as the result
+of reading some input data or of a computation, an inevitable error
+will arise in representing it as accurately as possible by
+a machine number.
+</div>
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
 
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized036.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized038.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

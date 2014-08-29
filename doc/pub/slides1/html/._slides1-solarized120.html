@@ -322,34 +322,41 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0120"></a>
+<!-- !split -->
 
+<h2>Project 1, hints  <a name="___sec122"></a></h2>
 
+We notice the sub-blocks which get repeated
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+$$
+   \left(\begin{array}{cccc}
+                          d_1 & e_1 & 0 & 0 \\
+                          0 & \tilde{d}_2 & e_2 & 0 \\
+                          0 & 0 & \tilde{d}_3 & e_3 \\
+                          0 & 0 & 0 & \tilde{d}_4
+                      \end{array} \right)
+$$
 
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
+The matrices we often end up with in rewriting for for example partial differential equations,
+have the feature that all leading principal submatrices are non-singular. If the matrix
+is symmetric as well it can be rewritten as \( A=LDL^T \) with \( D \) the diagonal and we have the
+following relations
+\( a_{11} = d_1 \), \( a_{k,k-1}=e_{k-1}d_{k-1} \) for \( k=2,\dots,n \) and finally
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$
+a_{kk} = d_k+e_{k-1}^2d_{k-1}=d_k+e_{k-1}a_{k,k-1}
+$$
 
+for \( k=2,\dots,n \).
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized119.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized121.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

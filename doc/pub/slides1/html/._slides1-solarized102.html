@@ -322,34 +322,40 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0102"></a>
+<!-- !split -->
+
+<h2>Armadillo, simple examples  <a name="___sec104"></a></h2>
 
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%">  <span style="color: #228B22">// maximum from each row (traverse along columns)</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;max(B,1) =&quot;</span> &lt;&lt; endl;
+  cout &lt;&lt; max(B,<span style="color: #B452CD">1</span>) &lt;&lt; endl;
+  <span style="color: #228B22">// maximum value in B</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;max(max(B)) = &quot;</span> &lt;&lt; max(max(B)) &lt;&lt; endl;
+  <span style="color: #228B22">// sum of each column (traverse along rows)</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;sum(B) =&quot;</span> &lt;&lt; endl;
+  cout &lt;&lt; sum(B) &lt;&lt; endl;
+  <span style="color: #228B22">// sum of each row (traverse along columns)</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;sum(B,1) =&quot;</span> &lt;&lt; endl;
+  cout &lt;&lt; sum(B,<span style="color: #B452CD">1</span>) &lt;&lt; endl;
+  <span style="color: #228B22">// sum of all elements</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;sum(sum(B)) = &quot;</span> &lt;&lt; sum(sum(B)) &lt;&lt; endl;
+  cout &lt;&lt; <span style="color: #CD5555">&quot;accu(B)     = &quot;</span> &lt;&lt; accu(B) &lt;&lt; endl;
+  <span style="color: #228B22">// trace = sum along diagonal</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;trace(B)    = &quot;</span> &lt;&lt; trace(B) &lt;&lt; endl;
+  <span style="color: #228B22">// random matrix -- values are uniformly distributed in the [0,1] interval</span>
+  mat E = randu&lt;mat&gt;(<span style="color: #B452CD">4</span>,<span style="color: #B452CD">4</span>);
+  E.print(<span style="color: #CD5555">&quot;E:&quot;</span>);
+</pre></div>
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized101.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized103.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

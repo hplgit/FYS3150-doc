@@ -322,34 +322,54 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0095"></a>
+<!-- !split -->
 
+<h2>Dynamic memory allocation in C/C++  <a name="___sec96"></a></h2>
 
+At least three possibilities in this course
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+<ul>
+  <li> Do it yourself</li>
+  <li> Use the functions provided in the library package lib.cpp</li>
+  <li> Use Armadillo <a href="http://arma.sourceforgenet" target="_blank"><tt>http://arma.sourceforgenet</tt></a> (a C++ linear algebra library, discussion next two weeks, both here and at lab). !split</li>
+</ul>
+
+<h2>Matrix Handling in C/C++, Dynamic Allocation  <a name="___sec97"></a></h2>
+
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Do it yourself.</b>
+<p>
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span style="color: #a7a7a7; font-weight: bold">int</span> N;
+<span style="color: #a7a7a7; font-weight: bold">double</span> **  A;
+A = <span style="color: #8B008B; font-weight: bold">new</span> <span style="color: #a7a7a7; font-weight: bold">double</span>*[N]
+<span style="color: #8B008B; font-weight: bold">for</span> ( i = <span style="color: #B452CD">0</span>; i &lt; N; i++)
+    A[i] = <span style="color: #8B008B; font-weight: bold">new</span> <span style="color: #a7a7a7; font-weight: bold">double</span>[N];
+</pre></div>
+<p>
+Always free space when you don't need an array anymore.
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span style="color: #8B008B; font-weight: bold">for</span> ( i = <span style="color: #B452CD">0</span>; i &lt; N; i++)
+    <span style="color: #8B008B; font-weight: bold">delete</span>[] A[i];
+<span style="color: #8B008B; font-weight: bold">delete</span>[] A;
+</pre></div>
+
+</div>
 
 
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized094.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized096.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

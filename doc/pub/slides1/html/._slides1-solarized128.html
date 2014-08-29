@@ -322,34 +322,40 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0128"></a>
+<!-- !split -->
 
+<h2>How to use the Library functions  <a name="___sec132"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
+Standard C/C++: fetch the files <code>lib.cpp</code> and <code>lib.h</code>. You can make a directory where you store
+these files, and eventually its compiled version lib.o. The example here is program1.cpp from
+chapter 6 and performs the matrix inversion.
 
 <p>
-<!-- institution(s) -->
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%"><span style="color: #228B22">//  Simple matrix inversion example</span>
+<span style="color: #1e889b">#include &lt;iostream&gt;</span>
+<span style="color: #1e889b">#include &lt;new&gt;</span>
+<span style="color: #1e889b">#include &lt;cstdio&gt;</span>
+<span style="color: #1e889b">#include &lt;cstdlib&gt;</span>
+<span style="color: #1e889b">#include &lt;cmath&gt;</span>
+<span style="color: #1e889b">#include &lt;cstring&gt;</span>
+<span style="color: #1e889b">#include &quot;lib.h&quot;</span>
+
+<span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> std;
+
+<span style="color: #228B22">/* function declarations */</span>
+
+<span style="color: #a7a7a7; font-weight: bold">void</span> <span style="color: #008b45">inverse</span>(<span style="color: #a7a7a7; font-weight: bold">double</span> **, <span style="color: #a7a7a7; font-weight: bold">int</span>);
+</pre></div>
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized127.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized129.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

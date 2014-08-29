@@ -322,34 +322,32 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0172"></a>
+<!-- !split -->
 
+<h2>Programming classes  <a name="___sec178"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
+Member functions of our class are defined by preceding the name of the function with the <code>template</code> keyword.
+Consider the function we defined as <code>Complex:: Complex (double re_a, double im_a)</code>.
+We would rewrite this function as
 
 <p>
-<!-- institution(s) -->
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%"><span style="color: #8B008B; font-weight: bold">template</span>&lt;<span style="color: #8B008B; font-weight: bold">class</span> <span style="color: #008b45; font-weight: bold">T</span>&gt;
+Complex&lt;T&gt;:: Complex (T re_a, T im_a)
+{ re = re_a; im = im_a; }
+</pre></div>
 <p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+The member functions  are otherwise defined following ordinary member function definitions.
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized171.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized173.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

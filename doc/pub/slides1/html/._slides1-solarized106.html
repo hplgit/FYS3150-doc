@@ -322,34 +322,59 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0106"></a>
+<!-- !split -->
+
+<h2>Gaussian Elimination  <a name="___sec108"></a></h2>
+
+We start with the linear set of equations
+
+$$
+   {\bf A}{\bf x} = {\bf w}.
+$$
+
+We assume also that the matrix \( {\bf A} \) is non-singular and that the
+matrix elements along the diagonal satisfy \( a_{ii} \ne 0 \). Simple \( 4\times 4  \) example
+
+$$
+\left(\begin{array}{cccc}
+                           a_{11}& a_{12} &a_{13}& a_{14}\\
+                           a_{21}& a_{22} &a_{23}& a_{24}\\
+                           a_{31}& a_{32} &a_{33}& a_{34}\\
+                           a_{41}& a_{42} &a_{43}& a_{44}\\
+                      \end{array} \right)\left(\begin{array}{c}
+                           x_1\\
+                           x_2\\
+                           x_3 \\
+                           x_4  \\
+                      \end{array} \right)
+  =\left(\begin{array}{c}
+                           w_1\\
+                           w_2\\
+                           w_3 \\
+                           w_4\\
+                      \end{array} \right).
+$$
+
+or
+
+$$
+\begin{align}
+ a_{11}x_1 +a_{12}x_2 +a_{13}x_3 + a_{14}x_4=&w_1 \nonumber \\
+a_{21}x_1 + a_{22}x_2 + a_{23}x_3 + a_{24}x_4=&w_2 \nonumber \\
+a_{31}x_1 + a_{32}x_2 + a_{33}x_3 + a_{34}x_4=&w_3 \nonumber \\
+a_{41}x_1 + a_{42}x_2 + a_{43}x_3 + a_{44}x_4=&w_4. \nonumber
+\end{align}
+$$
 
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized105.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized107.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

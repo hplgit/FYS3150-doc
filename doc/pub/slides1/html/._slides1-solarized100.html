@@ -322,34 +322,43 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0100"></a>
+<!-- !split -->
+
+<h2>Armadillo, simple examples  <a name="___sec102"></a></h2>
 
 
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%">  mat B;
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+  <span style="color: #228B22">// endr indicates &quot;end of row&quot;</span>
+  B &lt;&lt; <span style="color: #B452CD">0.555950</span> &lt;&lt; <span style="color: #B452CD">0.274690</span> &lt;&lt; <span style="color: #B452CD">0.540605</span> &lt;&lt; <span style="color: #B452CD">0.798938</span> &lt;&lt; endr
+    &lt;&lt; <span style="color: #B452CD">0.108929</span> &lt;&lt; <span style="color: #B452CD">0.830123</span> &lt;&lt; <span style="color: #B452CD">0.891726</span> &lt;&lt; <span style="color: #B452CD">0.895283</span> &lt;&lt; endr
+    &lt;&lt; <span style="color: #B452CD">0.948014</span> &lt;&lt; <span style="color: #B452CD">0.973234</span> &lt;&lt; <span style="color: #B452CD">0.216504</span> &lt;&lt; <span style="color: #B452CD">0.883152</span> &lt;&lt; endr
+    &lt;&lt; <span style="color: #B452CD">0.023787</span> &lt;&lt; <span style="color: #B452CD">0.675382</span> &lt;&lt; <span style="color: #B452CD">0.231751</span> &lt;&lt; <span style="color: #B452CD">0.450332</span> &lt;&lt; endr;
 
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
+  <span style="color: #228B22">// print to the cout stream</span>
+  <span style="color: #228B22">// with an optional string before the contents of the matrix</span>
+  B.print(<span style="color: #CD5555">&quot;B:&quot;</span>);
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+  <span style="color: #228B22">// the &lt;&lt; operator can also be used to print the matrix</span>
+  <span style="color: #228B22">// to an arbitrary stream (cout in this case)</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;B:&quot;</span> &lt;&lt; endl &lt;&lt; B &lt;&lt; endl;
+  <span style="color: #228B22">// save to disk</span>
+  B.save(<span style="color: #CD5555">&quot;B.txt&quot;</span>, raw_ascii);
+  <span style="color: #228B22">// load from disk</span>
+  mat C;
+  C.load(<span style="color: #CD5555">&quot;B.txt&quot;</span>);
+  C += <span style="color: #B452CD">2.0</span> * B;
+  C.print(<span style="color: #CD5555">&quot;C:&quot;</span>);
+</pre></div>
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized099.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized101.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

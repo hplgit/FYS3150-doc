@@ -322,34 +322,54 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0122"></a>
+<!-- !split -->
 
+<h2>LU Decomposition, why?  <a name="___sec125"></a></h2>
 
+There are at least three main advantages with LU decomposition compared with standard Gaussian elimination:
 
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
+<ul>
+  <li> It is straightforward to compute the determinant of a matrix</li>
+  <li> If we have to solve sets of linear equations with the same matrix but with different vectors \( {\bf y} \), the number of FLOPS is of the order \( n^3 \).</li>
+  <li> The invers is such an operation !split</li>
+</ul>
+
+<h2>LU Decomposition, linear equations  <a name="___sec126"></a></h2>
+
+With the LU decomposition it is rather
+simple to solve a system of linear equations
+
+$$
+\begin{align}
+ a_{11}x_1 +a_{12}x_2 +a_{13}x_3 + a_{14}x_4=&w_1 \nonumber \\
+a_{21}x_1 + a_{22}x_2 + a_{23}x_3 + a_{24}x_4=&w_2 \nonumber \\
+a_{31}x_1 + a_{32}x_2 + a_{33}x_3 + a_{34}x_4=&w_3 \nonumber \\
+a_{41}x_1 + a_{42}x_2 + a_{43}x_3 + a_{44}x_4=&w_4. \nonumber
+\end{align}
+$$
+
 
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
+This can be written in matrix form as
 
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
+$$ {\bf Ax}={\bf w}. $$
 
 
 <p>
-<!-- institution(s) -->
+where \( {\bf A} \) and \( {\bf w} \) are known and we have to solve for
+\( {\bf x} \). Using the LU dcomposition we write
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+$$ {\bf A} {\bf x} \equiv {\bf L} {\bf U} {\bf x} ={\bf w}. $$
+
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized121.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized123.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

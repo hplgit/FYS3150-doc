@@ -322,34 +322,52 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0108"></a>
+<!-- !split -->
+
+<h2>Gaussian Elimination  <a name="___sec110"></a></h2>
+
+Our actual \( 4\times 4 \) example reads after the first operation
+
+$$
+\left(\begin{array}{cccc}
+                           a_{11}& a_{12} &a_{13}& a_{14}\\
+                           0& (a_{22}-\frac{a_{21}a_{12}}{a_{11}}) &(a_{23}-\frac{a_{21}a_{13}}{a_{11}}) & (a_{24}-\frac{a_{21}a_{14}}{a_{11}})\\
+0& (a_{32}-\frac{a_{31}a_{12}}{a_{11}})& (a_{33}-\frac{a_{31}a_{13}}{a_{11}})& (a_{34}-\frac{a_{31}a_{14}}{a_{11}})\\
+0&(a_{42}-\frac{a_{41}a_{12}}{a_{11}}) &(a_{43}-\frac{a_{41}a_{13}}{a_{11}}) & (a_{44}-\frac{a_{41}a_{14}}{a_{11}}) \\
+                      \end{array} \right)\left(\begin{array}{c}
+                           x_1\\
+                           x_2\\
+                           x_3 \\
+                           x_4  \\
+                      \end{array} \right)
+  =\left(\begin{array}{c}
+                           y_1\\
+                           w_2^{(2)}\\
+                           w_3^{(2)} \\
+                           w_4^{(2)}\\
+                      \end{array} \right),
+$$
+
+or
+
+$$
+\begin{align}
+ b_{11}x_1 +b_{12}x_2 +b_{13}x_3 + b_{14}x_4=&y_1 \nonumber \\
+ a^{(2)}_{22}x_2 + a^{(2)}_{23}x_3 + a^{(2)}_{24}x_4=&w^{(2)}_2 \nonumber \\
+ a^{(2)}_{32}x_2 + a^{(2)}_{33}x_3 + a^{(2)}_{34}x_4=&w^{(2)}_3 \nonumber \\
+ a^{(2)}_{42}x_2 + a^{(2)}_{43}x_3 + a^{(2)}_{44}x_4=&w^{(2)}_4, \nonumber \\
+\end{align}
+$$
 
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
-<p>
-<!-- institution(s) -->
-
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized107.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized109.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

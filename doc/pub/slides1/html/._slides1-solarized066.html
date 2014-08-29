@@ -322,34 +322,42 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0066"></a>
+<!-- !split -->
 
+<h2>Pointer example II  <a name="___sec67"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
 <p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
-
 <p>
-<!-- institution(s) -->
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
-<p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span style="color: #a7a7a7; font-weight: bold">int</span> matr[<span style="color: #B452CD">2</span>];
+<span style="color: #a7a7a7; font-weight: bold">int</span> *p;
+p = &amp;matr[<span style="color: #B452CD">0</span>];
+matr[<span style="color: #B452CD">0</span>] = <span style="color: #B452CD">321</span>;
+matr[<span style="color: #B452CD">1</span>] = <span style="color: #B452CD">322</span>;
+printf(<span style="color: #CD5555">&quot;\nAddress of matrix element matr[1]: %p&quot;</span>,&amp;matr[<span style="color: #B452CD">0</span>]);
+printf(<span style="color: #CD5555">&quot;\nValue of the  matrix element  matr[1]; %d&quot;</span>,matr[<span style="color: #B452CD">0</span>]);
+printf(<span style="color: #CD5555">&quot;\nAddress of matrix element matr[2]: %p&quot;</span>,&amp;matr[<span style="color: #B452CD">1</span>]);
+printf(<span style="color: #CD5555">&quot;\nValue of the matrix element  matr[2]: %d\n&quot;</span>, matr[<span style="color: #B452CD">1</span>]);
+printf(<span style="color: #CD5555">&quot;\nValue of the pointer p: %p&quot;</span>,p);
+printf(<span style="color: #CD5555">&quot;\nThe value p points to: %d&quot;</span>,*p);
+printf(<span style="color: #CD5555">&quot;\nThe value that (p+1) points to  %d\n&quot;</span>,*(p+<span style="color: #B452CD">1</span>));
+printf(<span style="color: #CD5555">&quot;\nAddress of pointer p : %p\n&quot;</span>,&amp;p);
+</pre></div>
+
+</div>
+
+
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized065.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized067.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>

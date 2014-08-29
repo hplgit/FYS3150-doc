@@ -322,34 +322,37 @@ MathJax.Hub.Config({
 
 
     
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0116"></a>
+<!-- !split -->
 
+<h2>Gaussian Elimination and Tridiagonal matrices, project 1  <a name="___sec118"></a></h2>
 
-
-<center><h1>Slides from FYS3150/4150 Lectures</h1></center>  <!-- document title -->
-
-<p>
-<!-- author(s): Morten Hjorth-Jensen -->
-
-<center>
-<b>Morten Hjorth-Jensen</b> [1, 2]
-</center>
-
+In case your system of equations leads to a tridiagonal matrix, it is clearly an overkill to employ
+Gaussian elimination or the standard LU decomposition.
+You will encounter several applications involving tridiagonal matrices in our discussion of
+partial differential equations in chapter 10.
 
 <p>
-<!-- institution(s) -->
+Our algorithm starts with forward substitution with a loop over of the elements \( i \) and can be expressed via the
+following piece of code
 
-<center>[1] <b>Department of Physics and Center of Mathematics for Applications, University of Oslo</b></center>
-<center>[2] <b>National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
 <p>
-<center><h4>Aug 29, 2014</h4></center> <!-- date -->
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="line-height: 125%">   btemp = b[<span style="color: #B452CD">1</span>];
+   u[<span style="color: #B452CD">1</span>] = f[<span style="color: #B452CD">1</span>]/btemp;
+   <span style="color: #8B008B; font-weight: bold">for</span>(i=<span style="color: #B452CD">2</span> ; i &lt;= n ; i++) {
+      temp[i] = c[i-<span style="color: #B452CD">1</span>]/btemp;
+      btemp = b[i]-a[i]*temp[i];
+      u[i] = (f[i] - a[i]*u[i-<span style="color: #B452CD">1</span>])/btemp;
+</pre></div>
 <p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="._slides1-solarized115.html">&laquo; Previous</a></div>
 </td><td>
-<div style="text-align: right;"><a href="._slides1-solarized001.html">Next &raquo;</a></div>
+<div style="text-align: right;"><a href="._slides1-solarized117.html">Next &raquo;</a></div>
 </td></tr></table>
 <!-- end bottom navigation -->
 </p>
