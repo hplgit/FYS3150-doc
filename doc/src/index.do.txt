@@ -21,3 +21,7 @@ AUTHOR: Morten Hjorth-Jensen Email:morten.hjorth-jensen@fys.uio.no
 ===== Slides week 34-36 =====
 
 ${slide_types("slides1")}
+
+===== Slides for week 37 and the rest of the semester =====
+
+${slide_types("slides2")}

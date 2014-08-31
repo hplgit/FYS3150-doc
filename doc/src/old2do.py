@@ -8,13 +8,21 @@ def transform(filestr):
     filestr = re.sub(r'\r', '', filestr)
     # Remove comments
     filestr = re.sub(r'^%.*$', '', filestr, flags=re.MULTILINE)
-    # Remove trailing }
+    # Remove trailing } (these are normally matched to {\frame, or {\small)
     filestr = re.sub(r'^ *\} *$', '', filestr, flags=re.MULTILINE)
 
     filestr = re.sub(r'^ *(\\\[|\\begin\{equation\*?\}|\\begin\{eqnarray\*?\})',
                      r'\n!bt\n\g<1>', filestr, flags=re.MULTILINE)
-    filestr = re.sub(r'^ *(\\\]|\\end\{equation\*?\}|\\end\{eqnarray\*?\})',
+    filestr = re.sub(r'(\\\]|\\end\{equation\*?\}|\\end\{eqnarray\*?\})',
                      r'\g<1>\n!et', filestr, flags=re.MULTILINE)
+
+    # label on separate line if preceded by anything
+    filestr = re.sub(r'(.+)\\label', '\g<1>\nlabel', filestr)
+    # the remaining lables are at the beginning of the line, remove backslash
+    filestr = re.sub(r'\\label', 'label', filestr)
+    filestr = re.sub(r'\\ref\{', 'ref{', filestr)
+    # not Eq.\ (ref...
+    filestr = re.sub(r'\.\\ ([A-Za-z(])', '. \g<1>', filestr)
 
     # Remove \item in lists with code or math
     pattern = r'(\\begin\{itemize\}|\\bit)(.+?)(\\end\{itemize\}|\\eit)'
@@ -34,6 +42,7 @@ def transform(filestr):
 
     filestr = re.sub(r'^\\frame\s+\{', '', filestr, flags=re.MULTILINE)
     filestr = re.sub(r'^\\frame\[.+?\{', '', filestr, flags=re.MULTILINE|re.DOTALL)
+    filestr = re.sub(r'^\\frame\{', '', filestr, flags=re.MULTILINE)
     filestr = re.sub(r'\\url\{([^}]+?)\}', 'URL: "\g<1>"', filestr)
     filestr = re.sub(r'\\noindent\s*', '', filestr)
     filestr = re.sub(r'\.~', '. ', filestr)
