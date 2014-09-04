@@ -3011,15 +3011,9 @@ END PROGRAM matrix
 !split
 ===== Overview of week 36 =====
 
-!bblock Linear Algebra
-  * Monday: Repetition from last week
-  * Discussion of Project 1, deadline 16 September (noon).
-  * Gaussian elimination, LU decomposition and linear equations
-  * Inverse of a matrix.
-  * Tuesday: Further discussion of linear algebra methods.
-  * Dynamic memory allocation in C/C++ and Fortran2008, use of the libraries like Armadillo for C++ users. How to use the C/C++ and Fortran 90/95 libraries. Programming classes in C++.
-  * Discussion of version control. Dropbox and GIT.
-  * Computer-Lab: Project 1.
+!bblock Linear Algebra and project 1
+  * Discussion of Project 1
+  * Object orientation and unit testing (see detailed instruction on webpage)
 !eblock
 
 !split
