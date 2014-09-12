@@ -4349,7 +4349,7 @@ namely EISPACK and LINPACK.
 !split
 ===== Discussion of Jacobi's method for eigenvalues =====
 !bblock 
-Consider an  ($n\times n$) orthogonal transformation matrix 
+Consider an  example of an ($n\times n$) orthogonal transformation matrix 
 !bt
 \[
 {\bf S}=
@@ -4360,9 +4360,8 @@ Consider an  ($n\times n$) orthogonal transformation matrix
 \dots & \dots & \dots & \dots      & \dots & \dots & 0 & \dots     \\ 
    0  &    0  & \dots & \cos\theta  &    0  & \dots & 0 & \sin\theta \\
    0  &    0  & \dots &   0        &    1  & \dots & 0 &   0       \\
-\dots & \dots & \dots & \dots      & \dots & \dots & 0 & \dots     \\
-   0  &    0  & \dots &  -\sin\theta        &    0  & \dots & 1 &   \cos\theta       \\ 
-   0  &    0  & \dots & 0 & \dots & \dots & 0 & 1  
+\dots & \dots & \dots & \dots      & \dots & \dots & 1 & \dots     \\
+   0  &    0  & \dots &  -\sin\theta        &    0  & \dots & 0 &   \cos\theta   
    \end{array}
  \right)
 \]
@@ -4382,7 +4381,7 @@ from zero are given by
 \[
     s_{kk}= s_{ll}=\cos\theta, 
     s_{kl}=-s_{lk}= -\sin\theta, 
-    s_{ii}=-s_{ii}=1\hspace{0.5cm} i\ne k \hspace{0.5cm} i \ne l,
+    s_{ii}=1\hspace{0.5cm} i\ne k \hspace{0.5cm} i \ne l,
 \]
 !et
 A similarity transformation 
